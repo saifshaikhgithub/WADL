@@ -1,0 +1,70 @@
+/* registration.css */
+
+/* Styles for the register-page section */
+.register-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #FF512F , #DD2476);
+}
+
+.register-page h1 {
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Styles for the form */
+.form {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  width: 400px;
+}
+
+.form label {
+  color: #555555;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.form button {
+  background-color: #00B4DB;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.form button:hover {
+  background-color: #0083B0;
+}
+
+.form .d-flex {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form .d-flex a {
+  color: #555555;
+}
+
+.form .d-flex a:hover {
+  text-decoration: underline;
+}

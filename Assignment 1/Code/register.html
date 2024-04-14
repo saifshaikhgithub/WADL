@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .signup {
+        float: right;
+        color: white;
+        padding: 12px 75px;
+      }
+
+      .navbar input {
+        border: 2px solid black;
+        border-radius: 14px;
+        padding: 3px 17px;
+        width: 129px;
+      }
+
+      h2 {
+        text-align: center;
+        padding-top: 40px;
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: #2ccd1b;
+        color: whitesmoke;
+      }
+
+      .box {
+        padding: 40px 50px;
+      }
+
+      form {
+        height: auto;
+        width: 25rem;
+        margin: auto;
+        color: rgb(0, 0, 0);
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255);
+        border-radius: 12px;
+        border: 0.2px solid rgba(49, 42, 48, 0.125);
+        padding: 20px 25px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 5px;
+        padding: 15px 18px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #15d471;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 5px;
+        margin: 7px 0;
+        width: 100%;
+        font-size: 18px;
+      }
+
+      button:hover {
+        background-color: #1fd043;
+        color: rgb(35, 29, 35);
+        cursor: pointer;
+      }
+
+      .headingsContainer {
+        text-align: center;
+      }
+
+      .headingsContainer p {
+        color: gray;
+      }
+
+      .mainContainer {
+        padding: 16px;
+      }
+
+      h1,
+      p {
+        text-align: center;
+      }
+
+      @media screen and (max-width: 600px) {
+        form {
+          width: 25rem;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        form {
+          width: 20rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <form action="RegisterController">
+        <div class="headingsContainer">
+          <h1>Register Here</h1>
+          <p>Kindly fill in this form to register.</p>
+        </div>
+        <div class="mainContainer">
+          <label for="username"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter username"
+            name="name"
+            id="username"
+            required
+          />
+
+          <label for="phno"><b>Phone Number</b></label>
+          <input
+            type="text"
+            placeholder="Enter Phone Number"
+            name="phno"
+            id="phno"
+            required
+          />
+
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+            required
+          />
+
+          <label for="pwd"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="password"
+            id="pwd"
+            required
+          />
+
+          <label for="pwd-repeat"><b>Confirm Password</b></label>
+          <input
+            type="password"
+            placeholder="Repeat Password"
+            name="confirmpass"
+            id="pwd-repeat"
+            required
+          />
+
+          <button type="submit">Register</button>
+          
+          <div>
+            <p>Already have an account? <a href="login.html">Log in</a>.</p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        
+        function validateForm() {
+          var username = document.getElementById("username").value;
+          var phno = document.getElementById("phno").value;
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("pwd").value;
+          var confirmPassword = document.getElementById("pwd-repeat").value;
+
+          if (
+            username === "" ||
+            phno === "" ||
+            email === "" ||
+            password === "" ||
+            confirmPassword === ""
+          ) {
+            alert("All fields must be filled");
+            return false;
+          }
+
+          
+          if (phno.length !== 10 || isNaN(phno)) {
+            alert("Phone number must be 10 digits");
+            return false;
+          }
+
+          
+          if (!email.includes("@gmail.com")) {
+            alert("Email must be a Gmail account");
+            return false;
+          }
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match");
+            return false;
+          }
+
+          return true;
+        }
+
+        document.querySelector("form").onsubmit = function () {
+          return validateForm();
+        };
+      });
+    </script>
+  </body>
+</html>

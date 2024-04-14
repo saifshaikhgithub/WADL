@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .content {
+    height: 100vh;
+  }
+  
+  .navbar {
+    background-color: #DD2476 !important;
+  }
+  
+  .register-page {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: #41295a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #2F0743,
+      #41295a
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #2F0743,
+      #41295a
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  /* transition page */
+  .filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 0 15px gray;
+  }
+  
+  .switch-icons {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 15px;
+  }
+  
+  /* antd icons */
+  .anticon svg {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .active-icons {
+    color: #6AB04C;
+  }
+  .inactive-icons {
+    color: #C65D5D;
+  }
+  

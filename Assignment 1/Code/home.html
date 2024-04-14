@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Paradise Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+      document.addEventListener('DOMContentLoaded', function () {
+        var profileElement = document.querySelector('.profile');
+        var dropdownContent = document.querySelector('.dropdown-content');
+        profileElement.addEventListener('click', function () {
+          dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        });
+      });
+    </script>
+    <div class="navbar1">
+      <div class="box1">
+        <div class="navbar-logo1">
+          <div class="logo1"></div>
+        </div>
+        <div class="home borders">
+          <a href="#">Home</a>
+        </div>
+        <div class="buy borders">
+          <a href="#">Buy</a>
+        </div>
+        <div class="sell borders">
+          <a href="#">Sell</a>
+        </div>
+        <div class="login borders">
+          <a
+            href="login.html"
+            onclick="document.getElementById('id01').style.display='block'"
+            >Login</a
+          >
+        </div>
+      </div>
+      <div class="search">
+        <input placeholder="Search" class="search-input border" />
+        <button class="searchbutton">Search</button>
+      </div>
+      <div class="box2">
+        <div class="favourites borders">
+          <i class="fa-regular fa-heart"></i>
+          <span class="favouritestext">Favourites</span>
+        </div>
+        <div class="cart borders">
+          <i class="fa-solid fa-cart-plus"></i>
+          <span class="carttext">Cart</span>
+        </div>
+        <div class="profile borders">
+          <i class="fa-regular fa-user"></i>
+          <div class="dropdown-content">
+            <a href="#">MyOrders</a>
+            <a href="#">Update Profile</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="IMG1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="IMG2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="IMG3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--<div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="IMG1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="IMG3.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="IMG2.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>-->
+    <div class="category">
+      <b>SHOP BY CATEGORY</b>
+    </div>
+    <div class="row row-cols-2 row-cols-md-4 g-2">
+      <div class="col">
+        <div class="card h-100 ">
+          <img src="cat3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HISTORY</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="cat2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SCIENCE</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="cat1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">SPORTS</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="cat4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">THRILLER</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="cat5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HORROR</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="cat6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TEXTBOOK</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="cat7.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HUMOR</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img8.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">OTHER</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="bookcards">
+      <div class="row">
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="cat3.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">HISTORY</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="cat2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">SCIENCE</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="cat1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">SPORTS</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="cat4.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">THRILLER</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="cat5.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">HORROR</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="cat6.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">TEXTBOOK</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="cat7.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">HUMOR</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="img8.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">OTHER</h5>
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <div class="latest">
+      <b>NEWLY ADDED</b>
+    </div>
+    <div class="row row-cols-2 row-cols-md-4 g-2">
+      <div class="col">
+        <div class="card h-100 ">
+          <img src="book1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">FOOTBALL STORIES</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Author : Mike Johnson</li>
+              <li class="list-group-item">Year Of Publication : May 30, 2023</li>
+              <li class="list-group-item">Language : English</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="book2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">THE TRAITORS SON</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author : Pedro Urvi</li>
+            <li class="list-group-item">Year Of Publication : Jan 18, 2020</li>
+            <li class="list-group-item">Language : English</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="book3.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">THE LAST MONUMENT</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author : Michael Grumley</li>
+            <li class="list-group-item">
+              Year Of Publication : March 31, 2020
+            </li>
+            <li class="list-group-item">Language : English</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="book4.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">SHELL PROGRAMMING IN UNIX, LINUX & OS</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author : Stephen Kochan</li>
+            <li class="list-group-item">Year Of Publication : Aug 31, 2016</li>
+            <li class="list-group-item">Language : English</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--<div class="newlyadded">
+      <div class="row">
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="book1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">FOOTBALL STORIES</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author : Mike Johnson</li>
+            <li class="list-group-item">Year Of Publication : May 30, 2023</li>
+            <li class="list-group-item">Language : English</li>
+          </ul>
+          <div class="card-body">
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="book2.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">THE TRAITORS SON</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author : Pedro Urvi</li>
+            <li class="list-group-item">Year Of Publication : Jan 18, 2020</li>
+            <li class="list-group-item">Language : English</li>
+          </ul>
+          <div class="card-body">
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="book3.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">THE LAST MONUMENT</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author : Michael Grumley</li>
+            <li class="list-group-item">
+              Year Of Publication : March 31, 2020
+            </li>
+            <li class="list-group-item">Language : English</li>
+          </ul>
+          <div class="card-body">
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+        <div
+          class="card"
+          style="
+            width: 17rem;
+            background-color: rgb(255, 255, 255);
+            border: 1.5px solid #242224;
+          "
+        >
+          <img src="book4.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">SHELL PROGRAMMING IN UNIX, LINUX & OS</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author : Stephen Kochan</li>
+            <li class="list-group-item">Year Of Publication : Aug 31, 2016</li>
+            <li class="list-group-item">Language : English</li>
+          </ul>
+          <div class="card-body">
+            <a
+              href="#"
+              class="btn btn-primary"
+              style="background-color: rgb(175, 34, 227); color: white"
+              >Shop Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <!-- Footer -->
+    <footer class="text-center" style="background-color: #eeccf0">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #3b5998"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #55acee"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Google -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #dd4b39"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #ac2bac"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #0082ca"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <!-- Github -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #333333"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for Queries</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form5Example2" class="form-control" placeholder="Email address"/>
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            BooksParadise is an online bookstore enabling users to effortlessly buy and sell both new and second-hand books. With a user-friendly interface, it offers a diverse collection, fostering a community of readers passionate about sustainability and affordable literary exploration.
+          </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Quick Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="home.html" class="text-dark">Home</a>
+                </li>
+                <li>
+                  <a href="register.html" class="text-dark">Register</a>
+                </li>
+                <li>
+                  <a href="login.html" class="text-dark">Login</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-dark">Myprofile</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Support</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-dark">Order Track</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-dark">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-dark">Find My Product</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-dark">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Policies</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-dark">Terms of Use</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-dark">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-dark">Happy Return</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-dark">Refund Policy</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-dark" href="">BooksParadise.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </body>
+</html>
