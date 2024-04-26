@@ -1,0 +1,19 @@
+<section class="container">
+<h1>{{ title }}</h1>
+
+<input type="text" #name placeholder="Enter your name" name="Name"> <br>
+<input type="text" #address placeholder="Enter your address" name="Address"> <br>
+<input type="text" #contact placeholder="Enter your contact" name="Contact"> <br>
+<input type="email" #email placeholder="Enter your email" name="Email"> <br>
+<input type="password" #password placeholder="Enter your password" name="password"> <br>
+
+<button (click)="getValue(name.value, address.value, contact.value, email.value)">Register</button>
+
+<h1>YOUR REGISTERED DATA</h1> <br>
+
+<p>Name: {{ displayname }}</p>
+<p>Address: {{ displayaddress }}</p>
+<p>Contact: {{ displaycontact }}</p>
+<p>Email: {{ displayemail }}</p>
+</section>
+
